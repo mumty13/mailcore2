@@ -220,6 +220,9 @@ namespace mailcore {
         virtual String * loginResponse();
         /** Filled by unparsed protocol data in case of ParseError (only for login for now). */
         virtual Data * unparsedResponseData();
+
+        bool enableFeature(String * feature);
+        void enableFeatures();
         
     public: // private
         virtual void loginIfNeeded(ErrorCode * pError);
@@ -307,8 +310,6 @@ namespace mailcore {
                                        HashMap * mapping, IMAPProgressCallback * progressCallback,
                                        Array * extraHeaders, ErrorCode * pError);
         void capabilitySetWithSessionState(IndexSet * capabilities);
-        bool enableFeature(String * feature);
-        void enableFeatures();
         Data * fetchMessage(String * folder, bool identifier_is_uid, uint32_t identifier,
                             IMAPProgressCallback * progressCallback, ErrorCode * pError);
         void storeFlagsAndCustomFlags(String * folder, bool identifier_is_uid, IndexSet * identifiers,
