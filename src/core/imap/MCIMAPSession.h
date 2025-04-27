@@ -221,8 +221,8 @@ namespace mailcore {
         /** Filled by unparsed protocol data in case of ParseError (only for login for now). */
         virtual Data * unparsedResponseData();
 
-        bool enableFeature(String * feature);
-        void enableFeatures();
+        virtual bool enableFeature(String * feature);
+        virtual void enableFeatures();
         
     public: // private
         virtual void loginIfNeeded(ErrorCode * pError);
