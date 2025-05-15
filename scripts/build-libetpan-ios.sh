@@ -6,12 +6,13 @@ popd > /dev/null
 
 . "$scriptpath/include.sh/build-dep.sh"
 
-url="https://github.com/dinhviethoa/libetpan.git"
-rev=5164ba2ebd3c7cbc7a9230aad32bdf8e24e207de
+url="https://github.com/mumty13/libetpan.git"
+rev=868845d9f35576fcc07543010201abf6d7d6d9ab
 name="libetpan-ios"
 xcode_target="libetpan ios"
 xcode_project="libetpan.xcodeproj"
 library="libetpan-ios.a"
 embedded_deps="libsasl-ios"
+build_for_external=1
 
 build_git_ios

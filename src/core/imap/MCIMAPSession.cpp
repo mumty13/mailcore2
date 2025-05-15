@@ -3,6 +3,7 @@
 #include "MCIMAPSession.h"
 
 #include <libetpan/libetpan.h>
+#include <libetpan/xallmail.h>
 #include <string.h>
 #include <stdlib.h>
 
@@ -4235,8 +4236,8 @@ void IMAPSession::capabilitySetWithSessionState(IndexSet * capabilities)
     if (mailimap_has_acl(mImap)) {
         capabilities->addIndex(IMAPCapabilityACL);
     }
-    if (mailimap_has_enable(mImap)) {
-        capabilities->addIndex(IMAPCapabilityEnable);
+    if (mailimap_has_xallmail(mImap)) {
+        capabilities->addIndex(IMAPCapabilityXAllMail);
     }
     applyCapabilities(capabilities);
 }
@@ -4276,6 +4277,9 @@ void IMAPSession::applyCapabilities(IndexSet * capabilities)
     if (capabilities->containsIndex(IMAPCapabilityQResync)) {
         mQResyncEnabled = true;
     }
+    if (capabilities->containsIndex(IMAPCapabilityXAllMail)) {
+        mXallMailEnabled = true;
+    }
     if (capabilities->containsIndex(IMAPCapabilityXYMHighestModseq)) {
         mXYMHighestModseqEnabled = true;
     }
@@ -4306,6 +4310,11 @@ bool IMAPSession::isIdleEnabled()
 bool IMAPSession::isXListEnabled()
 {
     return mXListEnabled;
+}
+
+bool IMAPSession::isXallMailEnabled()
+{
+  return mXallMailEnabled;
 }
 
 bool IMAPSession::isCondstoreEnabled()
@@ -4498,6 +4507,13 @@ void IMAPSession::enableFeatures()
     }
     else if (isCondstoreEnabled()) {
         enableFeature(MCSTR("CONDSTORE"));
+    }
+    
+    if (isXallMailEnabled()) {
+        int r = mailimap_enable_xallmail(mImap);
+        if (r == MAILIMAP_NO_ERROR) {
+          MCLog("X-ALL-MAIL enabled");
+        }
     }
 }
 

@@ -185,6 +185,7 @@ namespace mailcore {
         
         virtual bool isIdleEnabled();
         virtual bool isXListEnabled();
+        virtual bool isXallMailEnabled();
         virtual bool isCondstoreEnabled();
         virtual bool isQResyncEnabled();
         virtual bool isIdentityEnabled();
@@ -257,6 +258,7 @@ namespace mailcore {
         bool mIdleEnabled;
         bool mXListEnabled;
         bool mCondstoreEnabled;
+        bool mXallMailEnabled;
         bool mQResyncEnabled;
         bool mXYMHighestModseqEnabled;
         bool mIdentityEnabled;

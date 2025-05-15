@@ -6,10 +6,10 @@ build_git_ios()
     return
   fi
 
-  simarchs="i386 x86_64"
-  sdkminversion="7.0"
+  simarchs="x86_64"
+  sdkminversion="12.0"
   sdkversion="`xcodebuild -showsdks 2>/dev/null | grep iphoneos | sed 's/.*iphoneos\(.*\)/\1/'`"
-  devicearchs="armv7 armv7s arm64"
+  devicearchs="arm64"
 
   versions_path="$scriptpath/deps-versions.plist"
   version="`defaults read "$versions_path" "$name" 2>/dev/null`"
