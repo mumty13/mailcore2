@@ -1,0 +1,52 @@
+{
+  "mailcore_source_revision": "5fb0f93010ff7af426e72e9066db8cb19b8154be",
+  "source_provenance_limit": "All public headers and provider data match the old framework; the original binary does not record its exact source revision.",
+  "preserved_frameworks": {
+    "ios-arm64_armv7": {
+      "files": 217,
+      "byte_identical": true
+    },
+    "macos-x86_64": {
+      "files": 683,
+      "byte_identical": true
+    }
+  },
+  "dependencies": {
+    "ctemplate": {
+      "sha256": "ffad4b74d7c26a37dfd53e30e6037127c1e0fcbb8cea646c02f29914027b4768",
+      "simulator_objects": 13
+    },
+    "tidy": {
+      "sha256": "8d63bc82179053418c15227f8008c03902f93791b431960bf973bf4215556cb3",
+      "simulator_objects": 27
+    },
+    "libetpan": {
+      "sha256": "cebb9bf05bd2bb31c1a1a537127019403a72b7984223d02532ae064151c2ee89",
+      "simulator_objects": 177
+    },
+    "sasl": {
+      "sha256": "8e66634c3abac55327787d8406947da760d71eb479eddc258bac7c11e8d6efec",
+      "simulator_objects": 20
+    }
+  },
+  "simulator": {
+    "architectures": [
+      "x86_64",
+      "arm64"
+    ],
+    "arm64_platform": "IOSSIMULATOR",
+    "minimum_os": "15.0",
+    "matching_public_headers": 213,
+    "matching_exported_symbols": 5865,
+    "matching_objc_classes": 77,
+    "providers_identical": true,
+    "sha256": "be4bf57ede2f9b9dc2fa462c436603e8a06f0eec6b8ea17076d06eb5344dbc84"
+  },
+  "validation_environment": {
+    "xcode": "27.1",
+    "runtime": "iOS 26.5",
+    "architecture": "arm64"
+  },
+  "artifact_sha256": "86cdce40c874ff3a8ad4725d48a801815a5f4e3f030ed2dc245bc15f1f980e8a",
+  "original_device_binary_sha256": "f1d17949bc6445314b1d7a8cffc7d1d8a848077387f48c6b31a88f5e4d1f725f"
+}
