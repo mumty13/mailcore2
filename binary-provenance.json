@@ -14,19 +14,28 @@
   "dependencies": {
     "ctemplate": {
       "sha256": "ffad4b74d7c26a37dfd53e30e6037127c1e0fcbb8cea646c02f29914027b4768",
-      "simulator_objects": 13
+      "simulator_objects": 13,
+      "source_repository": "https://github.com/dinhviethoa/ctemplate",
+      "source_revision": "2c6ff9ae7d0ae1b973e57dd19859b95282776194"
     },
     "tidy": {
       "sha256": "8d63bc82179053418c15227f8008c03902f93791b431960bf973bf4215556cb3",
-      "simulator_objects": 27
+      "simulator_objects": 27,
+      "source_repository": "https://github.com/dinhviethoa/tidy-html5",
+      "source_revision": "71aaa8669c664447743bba73e07d70c291548dca"
     },
     "libetpan": {
       "sha256": "cebb9bf05bd2bb31c1a1a537127019403a72b7984223d02532ae064151c2ee89",
-      "simulator_objects": 177
+      "simulator_objects": 177,
+      "source_repository": "https://github.com/dinhviethoa/libetpan.git",
+      "source_revision": "5164ba2ebd3c7cbc7a9230aad32bdf8e24e207de"
     },
     "sasl": {
       "sha256": "8e66634c3abac55327787d8406947da760d71eb479eddc258bac7c11e8d6efec",
-      "simulator_objects": 20
+      "simulator_objects": 20,
+      "source_version": "2.1.26",
+      "source_url": "https://github.com/cyrusimap/cyrus-sasl/releases/download/cyrus-sasl-2.1.26/cyrus-sasl-2.1.26.tar.gz",
+      "source_sha256": "8fbc5136512b59bb793657f36fadda6359cae3b08f01fd16b3d406f1345b7bc3"
     }
   },
   "simulator": {
